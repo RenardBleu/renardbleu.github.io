@@ -51,24 +51,46 @@ function getValue() {
         alert.style.display = "flex"
         alert.style.transform = "translatey(0px)"
     } else {
-        name = initial
-        alert.style.display = "none"
-        alert.style.transform = "translatey(-60px)"
+        if (initial === " "){
+            name = "❌";
+            font = "500px 'Burbank Big Condensed Black'"
+            drawn();
+        }else {
+            if (initial === "  "){
+                name = "❌";
+                font = "500px 'Burbank Big Condensed Black'"
+                drawn();
+            }else {
+                if (initial === "   "){
+                    name = "❌";
+                    font = "500px 'Burbank Big Condensed Black'"
+                    drawn();
+                }else {
+                    text_len();
+                }
+            }
+        }
+    }
+}
+
+function text_len(){
+    name = initial
+    alert.style.display = "none"
+    alert.style.transform = "translatey(-60px)"
 
 //Modifi la taille de la police par rapport aux nombres de lettres
 
-        if (name.length === 1) {
-            font = "800px 'Burbank Big Condensed Black'";
-            drawn();
-        }
-        if (name.length === 2) {
-            font = "600px 'Burbank Big Condensed Black'";
-            drawn();
-        }
-        if (name.length === 3) {
-            font = "400px 'Burbank Big Condensed Black'";
-            drawn();
-        }
+    if (name.length === 1) {
+        font = "800px 'Burbank Big Condensed Black'";
+        drawn();
+    }
+    if (name.length === 2) {
+        font = "600px 'Burbank Big Condensed Black'";
+        drawn();
+    }
+    if (name.length === 3) {
+        font = "400px 'Burbank Big Condensed Black'";
+        drawn();
     }
 }
 

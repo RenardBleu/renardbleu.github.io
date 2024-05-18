@@ -44,14 +44,20 @@
     <h3>Attention, tu ne peut mettre seulement que 3 lettres dans ta pdp !</h3>
 </div>
 <header>
-    <img class="logo-site" src="logo-site.webp" alt="logo du site">
-    <div class="titre-site">
-        <h1>Générateur de PDP</h1>
-        <p>Envie d'une photo de profile Fortnite ?<br>Obtiens ta photo de profil sur le thème de la saison Mythes et Mortels !</p>
+    <div class="header-content">
+        <img class="logo-site" src="logo-site.webp" alt="logo du site">
+        <div class="titre-site">
+            <h1>Générateur de PDP</h1>
+            <p>Envie d'une photo de profile Fortnite ?<br>Obtiens ta photo de profil sur le thème de la saison Mythes et Mortels !</p>
+        </div>
+    </div>
+    <div class="header-btn-cta">
+        <a href="#sec1">Créer ta photo de profil</a>
+        <a href="#sec2" class="btn-extra">Profite de l'offre extra !</a>
     </div>
     <img class="fond" src="fond/fond_banner.webp" alt="image fond bannière">
 </header>
-<main>
+<main id="sec1">
     <section class="sec1">
         <h2 class="title">Modifie ta PDP</h2>
         <div class="content">
@@ -61,6 +67,7 @@
                     <div class="option">
                         <p>Fond "officiel" :</p>
                         <button id="back_style8" onclick="bg_style = bg.src = 'fond/default.png'; bg_loading();">Mythes et Mortels</button>
+                        <button id="back_style9" onclick="bg_style = bg.src = 'fond/meta_verse.png'; bg_loading();">Meta Verse</button>
                         <p>Fond mosaique :</p>
                         <button id="back_style1" onclick="bg_style = bg.src = 'fond/fond_default.png'; bg_loading();">Par défaut</button>
                         <button id="back_style2" onclick="bg_style = bg.src = 'fond/fond_bleu_vert.png'; bg_loading();">Shild</button>
@@ -82,21 +89,21 @@
                 </div>
                 <div class="input-initial">
                     <input type="text" id="initial" placeholder="Initiales (max 3 lettres)">
-                    <button type="button" onclick="getValue();">Envoyer</button>
                 </div>
                 <div class="option">
                     <h3>Couleur :</h3>
                     <div class="color">
-                        <button class="button_color" id="color_def" onclick=" color = '#ffffff'; drawn(); lueur_verif();">Par défaut</button>
-                        <button class="button_color" id="color_beige" onclick=" color = '#d8b396'; drawn(); lueur_verif();">Beige</button>
-                        <button class="button_color" id="color_red" onclick=" color = '#EE2F2FFF'; drawn(); lueur_verif();">Rouge</button>
-                        <button class="button_color" id="color_blue" onclick=" color = '#32DED8FF'; drawn(); lueur_verif();">Bleu</button>
-                        <button class="button_color" id="color_yellow" onclick=" color = '#FFE000FF'; drawn(); lueur_verif();">Jaune</button>
-                        <button class="button_color" id="color_green" onclick=" color = '#419D2BFF'; drawn(); lueur_verif();">Vert</button>
-                        <button class="button_color" id="color_purple" onclick=" color = '#CA12FFFF'; drawn(); lueur_verif();">Violet</button>
-                        <button class="button_color" id="color_pink" onclick=" color = '#ff55c5'; drawn(); lueur_verif();">Rose</button>
-                        <button class="button_color" id="color_orange" onclick=" color = '#fa6b2d'; drawn(); lueur_verif();">Orange</button>
-                        <button class="button_color" id="color_black" onclick=" color = '#151515'; drawn(); lueur_verif();">Noir</button>
+                        <input class="color-radio" type="radio" name="color" id="color_def" onclick=" color = '#ffffff'; drawn(); lueur_verif();" checked="checked">
+                        <input class="color-radio" type="radio" name="color" id="color_green" onclick=" color = '#1C8D55FF'; drawn(); lueur_verif();">
+                        <input class="color-radio" type="radio" name="color" id="color_blue_light" onclick=" color = '#67CBDCFF'; drawn(); lueur_verif();">
+                        <input class="color-radio" type="radio" name="color" id="color_beige" onclick=" color = '#d8b396'; drawn(); lueur_verif();">
+                        <input class="color-radio" type="radio" name="color" id="color_red" onclick=" color = '#EE2F2FFF'; drawn(); lueur_verif();">
+                        <input class="color-radio" type="radio" name="color" id="color_yellow" onclick=" color = '#FFE000FF'; drawn(); lueur_verif();">
+                        <input class="color-radio" type="radio" name="color" id="color_blue" onclick=" color = '#1c8ad9'; drawn(); lueur_verif();">
+                        <input class="color-radio" type="radio" name="color" id="color_purple" onclick=" color = '#a012ff'; drawn(); lueur_verif();">
+                        <input class="color-radio" type="radio" name="color" id="color_pink" onclick=" color = '#ff55c5'; drawn(); lueur_verif();">
+                        <input class="color-radio" type="radio" name="color" id="color_orange" onclick=" color = '#fa6b2d'; drawn(); lueur_verif();">
+                        <input class="color-radio" type="radio" name="color" id="color_black" onclick=" color = '#151515'; drawn(); lueur_verif();">
                     </div>
                     <div class="txt-style">
                         <h3>Style supplémentaire :</h3>
@@ -113,10 +120,6 @@
         <div class="download">
             <a href="#" id="c_download">Télécharger</a>
         </div>
-            <!--<div class="contenu">
-                <div class="option">
-                </div>
-            </div>-->
         <!--<div class="twitter-result">
             <h2 class="title">Aperçu sur Twitter ou x <span>(on s'en fiche...)</span></h2>
             <div class="twitter">
@@ -163,27 +166,35 @@
 
         </div>-->
     </section>
-    <section class="sec2">
-        <img class="exemple ex1" src="exemple/1.webp" alt="exemple1">
-        <img class="exemple ex2" src="exemple/2.webp" alt="exemple2">
-        <img class="exemple ex3" src="exemple/3.webp" alt="exemple3">
-        <img class="exemple ex4" src="exemple/4.webp" alt="exemple4">
-        <img class="bordure" src="bordure1.webp" alt="bordure de gauche">
-        <div class="contenu">
+    <section class="sec2" id="sec2">
+        <div class="content">
             <h2 class="title">Des PDP plus belle, plus extra !</h2>
-            <div>
+            <div class="describ">
                 <p>Tu veux une photo de profil qui sorte du lot ? Avec encore plus d'options ? <br>
                     Eh bien, tu tombes bien, car j'offre des photos de profils personnalisé fait manuellement avec plus d'options pour <b>seulement 2,99 € </b> !</p>
                 <p>Comment faire pour en bénéficier ?<br>
                     C'est très simple si tu es intéressé par cette offre, je t'invite à me contacter sur Twitter ou par mail "<b>renardbleu84100@gmail.com</b>" et de me faire ta demande.</p>
                 <p>Cette offre est <b>à vie</b> et tu ne seras pas obligé de payer pour ta prochaine demande.</p>
             </div>
+            <div class="bottom">
+                <div class="left">
+                    <h3>Avantage :</h3>
+                    <ul>
+                        <li>demande personnalisée</li>
+                        <li>accée au pdp d'évènement limité</li>
+                        <li>pdp réalisé à la main</li>
+                        <li>offre à vie</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="test"></div>
+                </div>
+            </div>
             <div class="offre">
                 <span>2.99€</span>
                 <a href="https://twitter.com/renardbleu_of">Contacte-moi pour profiter de l'offre extra</a>
             </div>
         </div>
-        <img class="bordure" src="bordure2.webp" alt="bordure de droite">
     </section>
     <section class="sec3">
         <div class="contenu">
