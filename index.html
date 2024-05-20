@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="logo-renard-site.png">
     <link rel="icon" type="image/x-icon" href="logo-renard-site.png">
+
+    <script src="https://kit.fontawesome.com/232bc93023.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <nav>
@@ -43,6 +45,9 @@
 <div class="alert">
     <h3>Attention, tu ne peut mettre seulement que 3 lettres dans ta pdp !</h3>
 </div>
+<div class="alert-anti-vol">
+    <h3>anti-vol, tu tentes quoi là ? Ta PDP ne doit pas être vide !</h3>
+</div>
 <header>
     <div class="header-content">
         <img class="logo-site" src="logo-site.webp" alt="logo du site">
@@ -52,31 +57,37 @@
         </div>
     </div>
     <div class="header-btn-cta">
-        <a href="#sec1">Créer ta photo de profil</a>
-        <a href="#sec2" class="btn-extra">Profite de l'offre extra !</a>
+        <a href="#sec1"><i class="fa-solid fa-pen"></i>Créer ta photo de profil</a>
+        <a href="#sec2" class="btn-extra"><i class="fa-solid fa-star"></i>Profite de l'offre extra !</a>
     </div>
-    <img class="fond" src="fond/fond_banner.webp" alt="image fond bannière">
+    <img class="fond" src="fond/fond-banner.jpg" alt="image fond bannière">
 </header>
 <main id="sec1">
     <section class="sec1">
-        <h2 class="title">Modifie ta PDP</h2>
+        <h2 class="title"><i class="fa-solid fa-sliders"></i>Modifie ta PDP</h2>
         <div class="content">
             <div class="left">
                 <div class="fond">
                     <h3>Fond :</h3>
                     <div class="option">
                         <p>Fond "officiel" :</p>
-                        <button id="back_style8" onclick="bg_style = bg.src = 'fond/default.png'; bg_loading();">Mythes et Mortels</button>
-                        <button id="back_style9" onclick="bg_style = bg.src = 'fond/meta_verse.png'; bg_loading();">Meta Verse</button>
-                        <p>Fond mosaique :</p>
-                        <button id="back_style1" onclick="bg_style = bg.src = 'fond/fond_default.png'; bg_loading();">Par défaut</button>
-                        <button id="back_style2" onclick="bg_style = bg.src = 'fond/fond_bleu_vert.png'; bg_loading();">Shild</button>
-                        <button id="back_style3" onclick="bg_style = bg.src = 'fond/fond_magma.png'; bg_loading();">Magma</button>
-                        <button id="back_style4" onclick="bg_style = bg.src = 'fond/fond_bleu_violet.png'; bg_loading();">Bleu/violet</button>
-                        <p>Fond galactique :</p>
-                        <button id="back_style5" onclick="bg_style = bg.src = 'fond/fond-ciel.png'; bg_loading();">Teaser 1</button>
-                        <button id="back_style6" onclick="bg_style = bg.src = 'fond/fond-ciel2.png'; bg_loading();">Teaser 2</button>
-                        <button id="back_style7" onclick="bg_style = bg.src = 'fond/fond-ciel3.png'; bg_loading();">Teaser 3</button>
+                        <button id="back_style1" onclick="bg_style = bg.src = 'fond/default.png'; bg_loading();">Mythes et Mortels</button>
+                        <button id="back_style2" onclick="bg_style = bg.src = 'fond/meta_verse.png'; bg_loading();">Meta Verse</button>
+                        <p>Fond teaser S3c5 :</p>
+                        <button id="back_style3" onclick="bg_style = bg.src = 'fond/fond-teaser1.png'; bg_loading();">Teaser 1</button>
+                        <button id="back_style4" onclick="bg_style = bg.src = 'fond/fond-teaser2.png'; bg_loading();">Teaser 2</button>
+                        <button id="back_style5" onclick="bg_style = bg.src = 'fond/fond-teaser3.png'; bg_loading();">Teaser 3</button>
+                    </div>
+                </div>
+                <div class="cloud">
+                    <h3>Nuages :</h3>
+                    <div class="option">
+                        <button id="cloud1" onclick="bg_style = cloud.src = 'nuage/vide.png'; cloud_loading();">Pas de nuage</button>
+                        <button id="cloud2" onclick="bg_style = cloud.src = 'nuage/nuage_v2_dark.png'; cloud_loading();">Nuage sombre</button>
+                        <button id="cloud3" onclick="bg_style = cloud.src = 'nuage/nuage_v2_orange.png'; cloud_loading();">Nuage orange</button>
+                        <button id="cloud4" onclick="bg_style = cloud.src = 'nuage/nuage_v2_yellow.png'; cloud_loading();">Nuage jaune</button>
+                        <button id="cloud5" onclick="bg_style = cloud.src = 'nuage/nuage_v2_dark_purple.png'; cloud_loading();">Nuage Violet</button>
+                        <button id="cloud6" onclick="bg_style = cloud.src = 'nuage/nuage_v2_pink.png'; cloud_loading();">Nuage rose</button>
                     </div>
                 </div>
             </div>
@@ -91,7 +102,7 @@
                     <input type="text" id="initial" placeholder="Initiales (max 3 lettres)">
                 </div>
                 <div class="option">
-                    <h3>Couleur :</h3>
+                    <h3 class="color-title">Couleur :</h3>
                     <div class="color">
                         <input class="color-radio" type="radio" name="color" id="color_def" onclick=" color = '#ffffff'; drawn(); lueur_verif();" checked="checked">
                         <input class="color-radio" type="radio" name="color" id="color_green" onclick=" color = '#1C8D55FF'; drawn(); lueur_verif();">
@@ -113,77 +124,36 @@
                         <div class="txt-lueur">
                             <input id="text-lueur" type="checkbox"><label for="text-lueur">Texte lumineux</label>
                         </div>
+                        <div class="txt-opacity">
+                            <input id="text-opacity" type="checkbox"><label for="text-opacity">Texte opacité base</label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="download">
-            <a href="#" id="c_download">Télécharger</a>
+            <a href="#" id="c_download"><i class="fa-solid fa-download"></i>Télécharger</a>
         </div>
-        <!--<div class="twitter-result">
-            <h2 class="title">Aperçu sur Twitter ou x <span>(on s'en fiche...)</span></h2>
-            <div class="twitter">
-                <div class="twiter-responsive">
-                    <div class="top">
-                        <i class="fa-solid fa-arrow-left"></i>
-                        <div>
-                            <h3>IA Renard</h3>
-                            <p>42 posts</p>
-                        </div>
-
-                    </div>
-                    <div class="banner"></div>
-                    <div class="profile">
-                        <img width="150" src="CautionMarkGraphic.webp" id="twitter_result_img" alt="rendu photo de profil sur twitter">
-                        <div class="profile-top">
-                            <div class="button">
-                                <div class="plus">...</div>
-                                <div class="msg"><i class="fa-regular fa-envelope"></i></div>
-                                <div class="follow">suivre</div>
-                            </div>
-                        </div>
-                        <div class="profile-name">
-                            <div class="name">
-                                <h2>IA Renard</h2>
-                                <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z" fill="#1d9bf0"></path></svg>
-                            </div>
-                            <p>@ia_renard</p>
-                        </div>
-                        <div class="describ">
-                            <p>💻Site web créé par <a href="https://twitter.com/renardbleu_of">@renardbleu_of</a> pour générer des PDP gratuitement !<br>👀Tu peux voir ici un aperçu de ce que ça va donner sur Twitter 😉 <br>✨Code créateur <b>renardbleu</b> pour me soutenir <a href="https://twitter.com/search?q=%23AD&src=hashtag_click">#AD</a></p>
-                            <div class="joint">
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <p>A rejoint Twitter en décembre 2023</p>
-                            </div>
-                        </div>
-                        <div class="abo">
-                            <div class="abonnement"><span>42</span><p>abonnements</p></div>
-                            <div class="followers"><span>275</span>abonnés</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>-->
     </section>
     <section class="sec2" id="sec2">
         <div class="content">
             <h2 class="title">Des PDP plus belle, plus extra !</h2>
             <div class="describ">
                 <p>Tu veux une photo de profil qui sorte du lot ? Avec encore plus d'options ? <br>
-                    Eh bien, tu tombes bien, car j'offre des photos de profils personnalisé fait manuellement avec plus d'options pour <b>seulement 2,99 € </b> !</p>
-                <p>Comment faire pour en bénéficier ?<br>
-                    C'est très simple si tu es intéressé par cette offre, je t'invite à me contacter sur Twitter ou par mail "<b>renardbleu84100@gmail.com</b>" et de me faire ta demande.</p>
+                    Eh bien, tu tombes bien, car j'offre des photos de profils personnalisé fait manuellement avec plus d'options pour <b>seulement 3,99 € </b> !</p><br>
+                <h3>Comment faire pour en bénéficier ?</h3><br>
+                    <p>C'est très simple si tu es intéressé par cette offre, je t'invite à me contacter sur Twitter ou par mail "<b>renardbleu84100@gmail.com</b>" et de me faire ta demande.</h3>
                 <p>Cette offre est <b>à vie</b> et tu ne seras pas obligé de payer pour ta prochaine demande.</p>
             </div>
             <div class="bottom">
                 <div class="left">
                     <h3>Avantage :</h3>
+                    <br>
                     <ul>
-                        <li>demande personnalisée</li>
-                        <li>accée au pdp d'évènement limité</li>
-                        <li>pdp réalisé à la main</li>
-                        <li>offre à vie</li>
+                        <li><i class="fa-solid fa-wand-magic-sparkles"></i><p>demande personnalisée</p></li>
+                        <li><i class="fa-solid fa-rotate-left"></i><p>accée au pdp d'évènement limité</p></li>
+                        <li><i class="fa-solid fa-user-pen"></i><p>pdp réalisé à la main</p></li>
+                        <li><i class="fa-solid fa-heart"></i><p>offre à vie</p></li>
                     </ul>
                 </div>
                 <div class="right">
@@ -191,8 +161,8 @@
                 </div>
             </div>
             <div class="offre">
-                <span>2.99€</span>
-                <a href="https://twitter.com/renardbleu_of">Contacte-moi pour profiter de l'offre extra</a>
+                <span>3.99€</span>
+                <a href="https://twitter.com/renardbleu_of"><i class="fa-solid fa-envelope"></i> Contacte-moi pour profiter de l'offre extra</a>
             </div>
         </div>
     </section>
