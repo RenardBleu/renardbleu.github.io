@@ -241,6 +241,34 @@ nav {
         font-size: 1.9rem;
     }
 }
+.mouv-up-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--text-color-menu);
+    text-decoration: none;
+    background-color: var(--main-color-fn);
+    box-shadow: rgba(21, 26, 29, 0.6) 0 0 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    transition: background-color 0.2s ease-out;
+}
+.mouv-up-btn i{
+    transition: transform 0.2s ease-in;
+}
+.mouv-up-btn:hover{
+    background-color: var(--main-color-fn-hover);
+    color: var(--title-color);
+}
+.mouv-up-btn:hover > i{
+    transform: translateY(-3px);
+}
 
 /*header Banner*/
 
@@ -593,6 +621,10 @@ main{
 
 /*===== Section 2 =====*/
 
+.ancresec2{
+    width: 100%;
+    height: 100px;
+}
 .test{
     width: 250px;
     height: 250px;
@@ -648,7 +680,7 @@ main{
     flex-direction: column;
     width: 50%;
     padding: 20px;
-    margin: 100px auto;
+    margin: 0 auto 100px auto;
     align-items: center;
     animation: lueur_extra_hover 4s linear infinite;
 }
@@ -684,6 +716,9 @@ main{
     margin: auto;
     display: flex;
     width: max-content;
+}
+.sec2 .content .offre a i{
+    margin-right: 10px;
 }
 .sec2 .content .offre span{
     position: absolute;
@@ -765,6 +800,25 @@ main{
     display: flex;
     align-items: center;
 }
+.sec3 article {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.sec3 article .content{
+    width: 70%;
+}
+.sec3 article i{
+    font-size: 3rem;
+    margin: 30px;
+    color: var(--text-color-menu);
+}
+.sec3 .art2{
+    flex-direction: row-reverse;
+}
+.sec3 .art2 .content{
+    text-align: right;
+}
 .sec3 .contenu{
     z-index: 5;
     width: 70%;
@@ -826,16 +880,23 @@ main{
     padding: 10px 20px;
     position: relative;
     border-radius: 10px;
-    transition: all 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
     margin: 50px auto;
-    width: 15%;
+    width: 18%;
     text-align: center;
-    transform: translateY(100px);
+
+}
+.mouv-up i{
+    margin-right: 10px;
+    transition: transform 0.2s ease-out;
 }
 .mouv-up:hover{
     background-color: var(--main-color-fn-hover);
     color: #ffff;
     cursor: pointer;
+}
+.mouv-up:hover > i{
+    transform: translateY(-3px);
 }
 @media (max-width: 1090px){
     .mouv-up{
