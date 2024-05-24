@@ -625,6 +625,15 @@ main{
     border-radius: 2px;
     background-color: var(--classic_btn);
     border: 2px var(--classic_btn--hover) solid;
+    transition: border 0.1s ease-out, background-color 0.2s ease-out;
+}
+.sec1 .content .right input[type=checkbox]:checked{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    background-color: var(--main-color-fn);
+    border: 4px var(--classic_btn--hover) solid;
 }
 .sec1 .content button{
     margin: 5px 0;
@@ -703,6 +712,19 @@ main{
         width: 24rem;
         font-size: 2.2rem;
         border: 3px var(--main-color-fn) solid;
+    }
+    .sec1 .content .right input[type=checkbox]{
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        border: 4px var(--classic_btn--hover) solid;
+    }
+    .sec1 .content .right input[type=checkbox]:checked{
+        appearance: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        border: 8px var(--classic_btn--hover) solid;
     }
 }
 
