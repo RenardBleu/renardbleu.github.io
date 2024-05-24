@@ -658,6 +658,32 @@ main{
 .sec1 h2 i {
     margin-right: 15px;
 }
+@media (max-width: 1090px){
+    .sec1{
+        background: none;
+        width: 100vw;
+        padding: 0;
+    }
+    #pdp-element{
+        width: 400px;
+    }
+    .sec1 .content .right{
+        width: 400px;
+    }
+    .sec1 .content .left{
+        width: 30%;
+    }
+    .sec1 .title{
+        font-size: 6rem;
+    }
+    .sec1 .content h3{
+        font-size: 3rem;
+        margin: 15px 0;
+    }
+    .sec1 .content .option p{
+        font-size: 6rem;
+    }
+}
 
 /*===== Section 2 =====*/
 
