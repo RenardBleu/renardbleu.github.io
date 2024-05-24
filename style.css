@@ -677,6 +677,7 @@ main{
 }
 @media (max-width: 1090px){
     .sec1{
+        margin-top: 150px;
         background: none;
         width: 100vw;
         padding: 0;
@@ -689,7 +690,7 @@ main{
         width: 400px;
     }
     .sec1 .content .left{
-        width: 30%;
+        width: 40%;
     }
     .sec1 .title{
         font-size: 6rem;
@@ -703,6 +704,7 @@ main{
     }
     .sec1 .content button{
         font-size: 1.8rem;
+        margin: 10px;
     }
     .sec1 .content .right label{
         font-size: 2.2rem;
@@ -725,6 +727,19 @@ main{
         height: 30px;
         border-radius: 4px;
         border: 8px var(--classic_btn--hover) solid;
+    }
+    .sec1 .content .right .option .color .color-radio{
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+    }
+    .sec1 .download a{
+        font-size: 2.5rem;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .sec1 .download{
+        margin: 50px;
     }
 }
 
@@ -866,24 +881,10 @@ main{
 }
 
 @media (max-width: 1090px){
-    .sec2 .ex1{
-        top: 45%;
-        left: 8%;
-    }
-    .sec2 .ex2{
-        top: 43%;
-        left: 80%;
-    }
-    .sec2 .ex3{
-         top: 53.8%;
-         left: 81%;
-    }
-    .sec2 .ex4{
-        top: 51%;
-        left: 7%;
-    }
     .sec2{
-        margin: 0;
+        margin: auto;
+        width: 95vw;
+        height: max-content;
     }
     .sec2 p{
         font-size: 1.8rem;
