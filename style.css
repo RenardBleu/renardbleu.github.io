@@ -874,29 +874,46 @@ main{
     font-size: 1.3rem;
 }
 
-@media (max-width: 1500px) {
-    .sec2 {
-        margin: 0;
-    }
-}
-
 @media (max-width: 1090px){
     .sec2{
         margin: auto;
         width: 95vw;
         height: max-content;
     }
+    .sec2 .content .bottom {
+        flex-direction: column-reverse;
+        padding: 30px 0;
+    }
+    .sec2 .content .bottom .left{
+        margin-top: 20px;
+    }
+    .sec2 .bottom .test{
+        width: 400px;
+        height: 400px;
+    }
+    .sec2 h2{
+        font-size: 6rem;
+    }
     .sec2 p{
         font-size: 1.8rem;
     }
-    .sec2 .contenu a{
-        font-size: 1.8rem;
-        padding: 20px;
-        margin: 0;
-    }
-    .sec2 .contenu .offre span{
-        transform: translateX(190px) translatey(-10px) rotateZ(20deg);
+    .sec2 .bottom h3{
         font-size: 3rem;
+    }
+    .sec2 .content .bottom .left ul li p,.sec2 .content .bottom .left ul li i{
+        font-size: 3rem;
+    }
+    .sec2 .offre a{
+        font-size: 2.5rem;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .sec2 .offre{
+        margin: 50px;
+    }
+    .sec2 .content .offre span{
+        transform: translateX(720px) translatey(-30px) rotateZ(20deg);
+        font-size: 4rem;
     }
 }
 
@@ -913,7 +930,7 @@ main{
 .sec3 article {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 .sec3 article .content{
     width: 70%;
@@ -954,19 +971,30 @@ main{
     .sec3 .contenu p{
         font-size: 1.8rem;
     }
-    .sec3 .contenu h3 {
-        font-size: 2.5rem;
+    .sec3 .contenu h2{
+        font-size: 6rem;
+    }
+    .sec3 .contenu h3{
+        font-size: 3rem;
+    }
+    .sec3 .contenu p{
+        font-size: 2rem;
+    }
+    .sec3 .contenu i{
+        font-size: 5rem;
     }
     .sec3{
         margin-top: 50px;
-        padding: 350px 0;
+        padding: 100px 0;
+        clip-path: none;
     }
     .sec3 .contenu{
-        width: 80%;
+        width: 90%;
     }
 }
 
 .sec4{
+    margin: 150px auto;
     height: max-content;
     display: grid;
     justify-content: center;
@@ -1010,8 +1038,10 @@ main{
 }
 @media (max-width: 1090px){
     .mouv-up{
-        font-size: 1.8rem;
-        width: 40%;
+        font-size: 3rem;
+        border-radius: 20px;
+        width: 50%;
+        margin: 100px auto;
     }
     .sec4 h2{
         font-size: 2rem;
