@@ -269,6 +269,14 @@ nav {
 .mouv-up-btn:hover > i{
     transform: translateY(-3px);
 }
+@media(max-width: 1090px) {
+    .mouv-up-btn{
+        width: 80px;
+        height: 80px;
+        font-size: 4rem;
+        border-radius: 15px;
+    }
+}
 
 /*header Banner*/
 
@@ -994,7 +1002,7 @@ main{
 }
 
 .sec4{
-    margin: 150px auto;
+    margin: 60px auto;
     height: max-content;
     display: grid;
     justify-content: center;
@@ -1044,8 +1052,11 @@ main{
         margin: 100px auto;
     }
     .sec4 h2{
-        font-size: 2rem;
+        font-size: 2.5rem;
         width: 100%;
+    }
+    .sec4{
+        margin: 150px 0;
     }
     .sec4 img{
         height: 700px;
