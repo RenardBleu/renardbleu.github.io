@@ -363,6 +363,9 @@ header .header-btn-cta .btn-extra{
 header .header-btn-cta .btn-extra:hover{
     animation: lueur_extra_hover 4s linear infinite;
 }
+header .describ-phone{
+    display: none;
+}
 @keyframes lueur_extra {
     0%{
         filter: drop-shadow(1px 0px 6px #ffd52e);
@@ -409,8 +412,41 @@ header .header-btn-cta .btn-extra:hover{
     }
 }
 @media (max-width: 1090px){
-    header .logo{
-        top: 170px;
+    header{
+        clip-path: none;
+        width: 100vw;
+    }
+    header .logo-site{
+        height: 300px;
+    }
+    header .titre-site p{
+        display: none;
+    }
+    header .describ-phone{
+        display: flex;
+        font-size: 3rem;
+        width: 90%;
+        margin: 50px auto;
+    }
+    header .titre-site h1{
+        font-size: 9rem;
+    }
+    header .header-content{
+        margin: 50px auto;
+        width: 100%;
+    }
+    header .header-btn-cta{
+        margin: 50px;
+        padding: 0;
+        display: grid;
+        height: max-content;
+    }
+    header .header-btn-cta a{
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        width: max-content;
+        padding: 20px;
+        border-radius: 20px;
     }
 }
 
