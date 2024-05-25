@@ -1,14 +1,17 @@
 //Definition des images
 let bg=new Image();
-bg.src = "fond/fond-teaser1.png";
+bg.src = "fond/default.png";
 
 let cloud=new Image();
 cloud.src = "nuage/vide.png";
 
+let logo=new Image();
+logo.src = "logo-site.webp";
+
 //Definition des varibales par défaut
 let initial = "";
 let dataURL = "#";
-let name = "😎";
+let name = "";
 let color = "white"
 let txt_style = "source-over"
 let txt_style_active = false
@@ -173,6 +176,9 @@ function bg_loading(){
 
 function drawn(){
 
+    if (name !== ""){
+        logo = cloud
+    }
     ctx.drawImage(bg_load,0,0, canvas.width, canvas.height);
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
@@ -194,6 +200,7 @@ function drawn(){
     ctx.shadowColor = '';
     ctx.globalCompositeOperation = "source-over";
     ctx.drawImage(cloud_load,0,0, canvas.width, canvas.height);
+    ctx.drawImage(logo,canvas.width/10, canvas.height/10, canvas.width/1.2, canvas.height/1.2);
 
     console.log("pdp genéré avec succès")
 
